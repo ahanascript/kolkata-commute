@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <title>Kolkata Commute</title>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- Header -->
+        <header class="hero">
+            
+
+            <div>
+                <h1>Kolkata Commute</h1>
+                <p>Find convenient ways to travel across the city.</p>
+            </div>
+        </header>
+
+
+        <!-- Search Section -->
+        <section class="search-box">
+
+            <div class="section-title">
+                <h2>Plan Your Journey</h2>
+                <p>Select your starting point and destination.</p>
+            </div>
+
+            <div class="route-inputs">
+
+                <div class="field">
+                    <label for="from">From</label>
+
+                    <div class="select-wrapper">
+                        <span class="input-icon">●</span>
+
+                        <select id="from">
+                            <option value="">Select source</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="swap-container">
+                    <button type="button" class="swap-btn" onclick="swapLocations()" title="Swap locations">
+                        ⇅
+                    </button>
+                </div>
+
+
+                <div class="field">
+                    <label for="to">To</label>
+
+                    <div class="select-wrapper">
+                        <span class="input-icon destination">●</span>
+
+                        <select id="to">
+                            <option value="">Select destination</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="find-btn" onclick="findRoutes()">
+                Find Routes
+            </button>
+
+        </section>
+
+
+        <!-- Results -->
+        <section class="results-section">
+
+            <div class="results-heading">
+                <h2>Available Routes</h2>
+                <span id="route-count"></span>
+            </div>
+
+            <div id="results"></div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>Kolkata Commute • Smart travel planning</p>
+    </footer>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
+```
